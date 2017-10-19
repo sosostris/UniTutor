@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>Dashboard</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<!-- Side navigation bar -->
+<div class="sidenav sidenav-to-left">
+    <div class="margin-bottom-16" style="height:43px;border-bottom: 1px solid #ffffff">
+        <img style="height:28px;width:auto;margin-left:60px" src="resources/UniTutor-white.png">
+    </div>
+    <a href="calendarView.html">Tutoring booking</a>
+    <a href="generalForum.html">General forum</a>
+    <a href="questionsAndAnswers.html">Questions & Answers</a>
+</div>
+
+<div class="main">
+
+    <!-- Header bar-->
+    <div class="header padding-top-8">
+        <span id="slideIcon" class="hkr-color padding-left-16"
+              style="font-size:30px;cursor:pointer;float:left">&#9776;</span>
+        <div class="headerItems">
+            <a class="header-item" style="padding-right:24px" href="#home" onclick="location.href='dashBoard.html';">Home</a>
+            <a class="header-item" href="#Q&A" onclick="location.href='questionsAndAnswers.html';">Q & A</a>
+            <a class="header-item" href="#generalForum" onclick="location.href='generalForum.html';">Forum</a>
+            <a class="header-item" href="#tutorView" onclick="location.href='tutorView.html';">Tutors</a>
+            <a class="header-item" href="#bookedSessions" onclick="location.href='calendarView.html';">My calendar</a>
+        </div>
+    </div>
+
+    <div class="pageContent center">
+
+        <div class="w3-container">
+            <div class="w3-display-container margin-vertical-16" style="height:40px">
+                <h4 class="w3-display-left hkr-color">News</h4>
+            </div>
+        </div>
+
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+            <h2 class="hkr-color w3-padding-16">Upcoming sessions</h2>
+            <div class="w3-container w3-cell" style="width:500px">
+                <h5 class="w3-opacity"><b>Algorithm and Data Structure / Xujia Zhou</b></h5>
+                <h6 class="hkr-color">15:00 - 16:00, 15th, November, 7-320N</h6>
+            </div>
+            <div class="w3-container w3-cell" style="width:30%">
+                <button class="w3-button hkr-color-bg w3-text-white margin-top-16"
+                        style="float:right">Contact tutor</button>
+            </div>
+            <hr class="margin-vertical-16">
+            <div class="w3-container w3-cell" style="width:500px">
+                <h5 class="w3-opacity"><b>Algorithm and Data Structure / Xujia Zhou</b></h5>
+                <h6 class="hkr-color margin-bottom-32">15:00 - 16:00, 30th, November, 7-320N</h6>
+            </div>
+            <div class="w3-container w3-cell" style="width:30%">
+                <button class="w3-button hkr-color-bg w3-text-white margin-top-16"
+                        style="float:right">Contact tutor</button>
+            </div>
+        </div>
+
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+            <h2 class="hkr-color w3-padding-16">Latest sessions</h2>
+            <div class="w3-container w3-cell" style="width:500px">
+                <h5 class="w3-opacity"><b>Algorithm and Data Structure / Xujia Zhou</b></h5>
+                <h6 class="hkr-color">28th, October - <span class="w3-tag hkr-color-bg w3-round">Not rated</span></h6>
+                <p>Please remember to rate the session and leave your feedback.</p>
+            </div>
+            <div class="w3-container w3-cell" style="width:30%">
+                <button class="w3-button hkr-color-bg w3-text-white margin-top-32"
+                        style="float:right"">Rate session
+                </button>
+            </div>
+            <hr class="margin-vertical-16">
+            <div class="w3-container w3-cell" style="width:500px">
+                <h5 class="w3-opacity"><b>Wireless Communications / JiajiaGiraffe</b></h5>
+                <h6 class="hkr-color">22th, October - <span class="w3-tag hkr-color-bg w3-round">Not rated</span></h6>
+                <p class="margin-bottom-32">Please remember to rate the session and leave your feedback.</p>
+            </div>
+            <div class="w3-container w3-cell" style="width:30%">
+                <button class="w3-button hkr-color-bg w3-text-white margin-top-32"
+                        style="float:right">Rate session
+                </button>
+            </div>
+        </div>
+
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+            <h2 class="hkr-color w3-padding-16">New answers to your questions</h2>
+            <div class="w3-container">
+                <h5 class="w3-opacity question"><a><b>Can anyone explain why SNR=2 in this problem? Thanks!</b></a></h5>
+                <h6 class="hkr-color">3th, November</h6>
+                <p>Hi, in this problem you need to do a bit of reverse calculation.
+                    If you move the 2 to the right side of the equation you get ...</p>
+            </div>
+            <hr class="margin-vertical-16">
+            <div class="w3-container">
+                <h5 class="w3-opacity question"><a><b>Here's an interesting algorithm problem. Anyone
+                    interested?</b></a></h5>
+                <h6 class="hkr-color">3th, October</h6>
+                <p class="margin-bottom-32">Ille enim occurrentia nescio quae comminiscebatur;
+                    Verba tu fingas et ea dicas, quae non sentias?
+                    Itaque si aut requietem natura non quaereret ...</p>
+            </div>
+        </div>
+
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+            <h2 class="hkr-color w3-padding-16">Updates of posts you have joined</h2>
+            <div class="w3-container">
+                <h5 class="w3-opacity question"><a><b>Anyone interested in some beer this Friday?</b></a></h5>
+                <h6 class="hkr-color">1st, November</h6>
+                <p>Hoc loco tenere se Triarius non potuit.
+                    Respondent extrema primis, media utrisque, omnia omnibus.
+                    Quid enim est a Chrysippo praetermissum in Stoicis? ...</p>
+            </div>
+            <hr class="margin-vertical-16">
+            <div class="w3-container">
+                <h5 class="w3-opacity question"><a><b>Que sais-je?</b></a></h5>
+                <h6 class="hkr-color">2nd, October</h6>
+                <p class="margin-bottom-32">In eo enim positum est id, quod dicimus esse expetendum.
+                    Ut aliquid scire se gaudeant? Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus
+                    ...</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+

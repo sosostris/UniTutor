@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+<title>New sessiong booking</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<!-- Side navigation bar -->
+<div class="sidenav sidenav-to-left">
+    <div class="margin-bottom-16" style="height:43px;border-bottom: 1px solid #ffffff">
+        <img style="height:28px;width:auto;margin-left:60px" src="resources/UniTutor-white.png">
+    </div>
+    <a href="calendarView.html">Tutoring booking</a>
+    <a href="generalForum.html">General forum</a>
+    <a href="questionsAndAnswers.html">Questions & Answers</a>
+</div>
+
+<div class="main">
+
+    <!-- Header bar-->
+    <div class="header padding-top-8">
+        <span id="slideIcon" class="hkr-color padding-left-16"
+              style="font-size:30px;cursor:pointer;float:left">&#9776;</span>
+        <div class="headerItems">
+            <a class="header-item" style="padding-right:24px" href="#home" onclick="location.href='dashBoard.html';">Home</a>
+            <a class="header-item" href="#tutorView" onclick="location.href='tutorView.html';">Tutors</a>
+            <a class="header-item" href="#bookedSessions" onclick="location.href='calendarView.html';">My calendar</a>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <div class="w3-display-container" style="height:40px"></div>
+    </div>
+
+    <div class="pageContent center">
+
+        <h6 class="hkr-color center" style="width:700px">Program:
+            <span style="font-weight:300">Bachelor Programme in Computer Science and Engineering</span>
+        </h6>
+        <h6 class="hkr-color center" style="width:700px">Admission year: <span style="font-weight:300">2016</span></h6>
+
+        <div class="w3-card-4 padding-top-16 margin-top-16 center" style="background-color:#eee;width:700px">
+            <div class="w3-row padding-top-8">
+                <div class="w3-col m3 w3-center"><p>Semester</p></div>
+                <div class="w3-col m8">
+                    <div id="HT2016" class="course" onclick="toggleHT2016Courses()">Autum 2016</div>
+                    <div id="VT2017" class="course" onclick="toggleVT2017Courses()">Spring 2017</div>
+                    <div id="HT2017" class="course" onclick="toggleHT2017Courses()">Autumn 2017</div>
+                </div>
+            </div>
+            <hr class="darkerHr margin-bottom-8">
+            <div class="w3-row">
+                <div class="w3-col m3 w3-center"><p>Course</p></div>
+                <div class="w3-col m8">
+                    <p id="courseHint" style="color:#999;font-size:14px">
+                        Select a semester to view courses in this semester</p>
+                    <div class="HT2016">
+                        <div class="course">Discrete Mathematics</div>
+                        <div class="course">Database Techniques</div>
+                        <div class="course">Fundamental Programming</div>
+                        <div class="course">Introduction to Engineering Metholodogy</div>
+                    </div>
+                    <div class="VT2017">
+                        <div class="course">Applied Mathematics I</div>
+                        <div class="course">Applied Physics</div>
+                        <div class="course">Object Oriented Programming</div>
+                        <div class="course">Applied Mathematics I</div>
+                    </div>
+                    <div class="HT2017">
+                        <div class="course">Operating System</div>
+                        <div class="course">Algorithm and Data Structure</div>
+                        <div class="course">Embedded System I</div>
+                        <div class="course">Applied Mathematics II</div>
+                    </div>
+                </div>
+            </div>
+            <hr class="darkerHr margin-bottom-8">
+            <div class="w3-row">
+                <div class="w3-col m3 w3-center"><p>Language</p></div>
+                <div class="w3-col m8">
+                    <div class="course">Swedish</div>
+                    <div class="course">English</div>
+                    <div class="course">Chinese</div>
+                    <div class="course">Other</div>
+                </div>
+            </div>
+            <hr class="darkerHr margin-bottom-8">
+            <div class="w3-row">
+                <div class="w3-col m3 w3-center"><p>Subject</p></div>
+                <div class="w3-col m8">
+                    <div class="course">Lecture</div>
+                    <div class="course">Assignment</div>
+                    <div class="course">Seminar</div>
+                    <div class="course">Exam</div>
+                    <div class="course">Other</div>
+                </div>
+            </div>
+            <hr class="darkerHr margin-bottom-0">
+            <div class="w3-container">
+                <span class="hkr-color w3-right"><a class="header-item"
+                                                    onclick="showTutorsFound()">Find tutor</a></span>
+            </div>
+            <div class="tutorsFound padding-bottom-16">
+                <div style="height:40px;background-color:#ddd">
+                    <div class="detailHeader" style="float:left">
+                        Tutors found at your request
+                    </div>
+                </div>
+                <div>
+                    <div class="w3-container w3-margin">
+                        <div class="w3-row margin-top-8">
+                            <div class="w3-col m3">
+                                <div class="w3-container">
+                                    <img src="resources/Xujia.jpg" class="w3-circle w3-margin-right"
+                                         style="width:80px;height:80px;object-fit:cover;margin-left:12px">
+                                </div>
+                                <div class="w3-container">
+                                    <div class="margin-top-16" style="position:relative;left:-10px">
+                                        <i class="material-icons hkr-color">star</i><i class="material-icons hkr-color">star</i><i
+                                            class="material-icons hkr-color">star</i><i
+                                            class="material-icons hkr-color">star</i>
+                                        <i class="material-icons hkr-color">star</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m5">
+                                <div class="w3-left">
+                                    <h4 class="hkr-color margin-bottom-0">Xujia Zhou (TBCSH 2015)</h4><br>
+                                    <p class="shortText">Xujia Zhou is a third-year student in the program TBCSH. Lorem
+                                        ipsum dolor sit amet,
+                                        consectetur <span><a onclick="expandText()">......</a></span></p>
+                                    <p class="longText">Xujia Zhou is a third-year student in program TBCSH 2015.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        At coluit ipse amicitias. Quo modo autem optimum, si bonum praeterea nullum est?
+                                        <span class="hint"><a onclick="collapseText()">(collaspe text)</a></span></p>
+                                </div>
+                            </div>
+                            <div class="w3-col m4">
+                                <button id="bookedTimeSlot" class="bookingTimeSlotButton w3-button hkr-color-bg w3-text-white margin-top-16"
+                                        style="float:right" onclick="$('#alertBookingDialog').show()">11:00 - 12:00, 07-320N
+                                </button>
+                                <button class="bookingTimeSlotButton w3-button hkr-color-bg w3-text-white margin-top-16"
+                                        style="float:right">15:00 - 16:00, 07-321N
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="w3-clear">
+
+                <div>
+                    <div class="w3-container w3-margin">
+                        <div class="w3-row margin-top-8">
+                            <div class="w3-col m3">
+                                <div class="w3-container">
+                                    <img src="resources/Eduardo.jpg" class="w3-circle w3-margin-right"
+                                         style="width:80px;height:80px;object-fit:cover;margin-left:12px">
+                                </div>
+                                <div class="w3-container">
+                                    <div class="margin-top-16" style="position:relative;left:-10px">
+                                        <i class="material-icons hkr-color">star</i><i class="material-icons hkr-color">star</i><i
+                                            class="material-icons hkr-color">star</i><i
+                                            class="material-icons hkr-color">star</i>
+                                        <i class="material-icons hkr-color">star</i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-col m5">
+                                <div class="w3-left">
+                                    <h4 class="hkr-color margin-bottom-0">Eduardo Flora (TBCSH 2015)</h4><br>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        At coluit ipse amicitias. </p>
+                                </div>
+                            </div>
+                            <div class="w3-col m4">
+                                <button class="bookingTimeSlotButton w3-button hkr-color-bg w3-text-white margin-top-16"
+                                        style="float:right">15:00 - 16:00, 07-319N
+                                </button>
+                                <button class="bookingTimeSlotButton w3-button hkr-color-bg w3-text-white margin-top-16"
+                                        style="float:right">17:00 - 18:00, 07-312N
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="alertBookingDialog" class="w3-modal">
+        <div class="w3-modal-content w3-animate-bottom w3-card-4" style="width:400px">
+            <header class="w3-container w3-text-white hkr-color-light-bg" style="height:40px">
+                    <span onclick="$('#alertBookingDialog').css('display', 'none')"
+                          class="w3-button w3-display-topright" style="height:40px">&times;</span>
+                <div class="w3-display-container" style="height:100%">
+                    <p class="w3-display-left">Booking confirmation</p>
+                </div>
+
+            </header>
+            <div class="w3-container">
+                <div style="height:200px;color:#666">
+                    <p style="margin-top:16px">Tutor:  Xujia Zhou</p>
+                    <p>Date:  30th, November, 2017</p>
+                    <p>Time:  11:00 - 12:00</p>
+                    <p>Location:  Room 07-320N.</p>
+                    <br>
+                    <p>Is everything correct?</p>
+                </div>
+            </div>
+            <footer class="margin-top-16" style="border-top: 1px solid #51ab47">
+                <div class="w3-display-container" style="height:36px">
+                    <p class="w3-button w3-display-right" style="cursor:pointer"
+                       onclick="bookSessionBySearch()">Yes, book it</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

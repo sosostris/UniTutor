@@ -1,0 +1,458 @@
+* {
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	cursor: pointer;
+}
+
+.hkr-color {
+	color: #51ab47;
+}
+
+.hkr-color-bg {
+	background-color: #51ab47;
+}
+
+.hkr-color-light {
+	color: #7ccb74;
+}
+
+.hkr-color-light-bg {
+	background-color: #7ccb74;
+}
+
+.hkr-color-lighter {
+	color: #abe1a5;
+}
+
+.margin-bottom-0 {
+	margin-bottom: 0;
+}
+
+.margin-top-6 {
+	margin-top: 6px;
+}
+
+.margin-top-8 {
+	margin-top: 8px;
+}
+
+.margin-vertical-8 {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.margin-top-16 {
+	margin-top: 16px;
+}
+
+.margin-top-32 {
+	margin-top: 32px;
+}
+
+.margin-bottom-16 {
+	margin-bottom: 16px;
+}
+
+.margin-bottom-32 {
+	margin-bottom: 32px;
+}
+
+.margin-vertical-16 {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.margin-horizontal-16 {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.padding-8 {
+	padding: 8px 8px 8px 8px;
+}
+
+.padding-16 {
+	padding: 16px 16px 16px 16px;
+}
+
+.padding-top-8 {
+	padding-top: 8px;
+}
+
+.padding-top-16 {
+	padding-top: 16px;
+}
+
+.padding-bottom-16 {
+	padding-bottom: 16px;
+}
+
+.padding-left-16 {
+	padding-left: 16px;
+}
+
+.padding-right-8 {
+	padding-right: 8px;
+}
+
+.padding-right-16 {
+	padding-right: 16px;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main {
+	margin-top: 60px;
+	margin-bottom: 80px;
+}
+
+.pageContent{
+	max-width: 60%;
+}
+
+.pageContentWide{
+	max-width: 80%;
+}
+
+.hint {
+	font-size:12px;
+	font-style: italic;
+	color:grey;
+}
+
+.error {
+	font-size:12px;
+	font-weight: bold;
+	color:crimson;
+}
+
+/*navigation*/
+.header{
+	width: 100%;
+	top: 0;
+	position: fixed;
+	height: 60px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #51ab47;
+	z-index: 1000;
+}
+
+.header-item{
+	cursor: pointer;
+	min-width: 80px;
+	text-align: center;
+	color: #51ab47;
+	font-weight: 300;
+	text-decoration: none;
+	padding: 8px;
+	float: right;
+	font-size: 16px;
+}
+
+.header-item:hover{
+	color: #186e0e;
+	text-decoration: none;
+}
+
+.sidenav {
+	width: 250px;
+	height: 100%;
+	position: fixed;
+	background-color: #51ab47;
+	padding-top: 16px;
+	top: 0;
+	z-index: 1;
+}
+
+.sidenav-to-left {
+	left: -250px;
+}
+
+.sidenav-to-left.sidenav-open {
+	left: 0;
+}
+
+.main-push-right {
+	overflow-x: hidden;
+	position: relative;
+	margin-left: 250px;
+}
+
+.headerItems {
+	position: fixed;
+	right: 0;
+}
+
+.sidenav, .main {
+	transition: all 0.5s ease;
+}
+
+.sidenav a {
+	font-weight: 100;
+	padding: 4px 4px 4px 32px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #ffffff;
+	display: block;
+	white-space:nowrap;
+	transition: 0.3s;
+}
+
+.sidenav a:hover {
+	color: #abe1a5;
+}
+
+/*dashboard*/
+.question {
+	cursor: pointer;
+}
+
+.question a:hover {
+	color: #51ab47;
+}
+
+/*calendar*/
+.month {
+	padding: 70px 25px;
+	width: 100%;
+	background: #7ccb74;
+	text-align: center;
+}
+
+.month ul {
+	margin: 0;
+	padding: 0;
+}
+
+.month ul li {
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.month .prev {
+	position: relative;
+	float: left;
+	padding-top: 20px;
+}
+
+.month .next {
+	position: relative;
+	float: right;
+	padding-top: 20px;
+}
+
+.month .prev:hover {
+	color: #51ab47;
+    text-decoration: none;
+}
+
+.month .next:hover {
+	color: #51ab47;
+	text-decoration: none;
+}
+
+.weekdays {
+	margin: 0;
+	padding: 10px 0;
+	background-color: #ddd;
+}
+
+.weekdays li {
+	display: inline-block;
+	width: 13.6%;
+	color: #666;
+	text-align: center;
+}
+
+.days {
+	padding: 10px 0;
+	background: #eee;
+	margin: 0;
+}
+
+.days li {
+	list-style-type: none;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	width: 13.6%;
+	margin-bottom: 8px;
+	font-size:12px;
+	color: #777;
+}
+
+.days li .active {
+	padding: 5px;
+	background-color: #51ab47;
+	color: white;
+}
+
+.days li .free {
+	padding: 5px;
+	background-color: #51ab47;
+	color: white;
+}
+
+.days li .booked {
+	padding: 5px;
+	background-color: crimson;
+	color: white;
+}
+
+.days li .past {
+	color: #cccccc;
+}
+
+/*calendar dropdown booking detail*/
+.bookingDetail {
+	height:200px;
+	background-color: #eee;
+	display:none;
+}
+
+.detailHeader {
+	font-size: 16px;
+	color:#666;
+	padding: 8px 16px 8px 16px;
+}
+
+.bookingDetail th {
+	font-size: 14px;
+	font-weight: 400;
+	color: #7ccb74;
+	text-align: center;
+}
+
+.bookingDetail td {
+	font-size: 14px;
+	font-weight: 300;
+	color: #777;
+	text-align: center;
+}
+
+#deleteDialog {
+	margin-top: 400px;
+}
+
+#alertBookedDialog {
+	margin-top: 400px;
+}
+
+#alertBookingDialog {
+	margin-top: 200px;
+}
+
+/*Tutor*/
+.course {
+	color: #666;
+	display: inline-block;
+	margin: 0 8px 8px 8px;
+	border: 1px solid #51ab47;
+	padding: 4px 6px 4px 6px;
+	min-width: 60px;
+	cursor: pointer;
+	background-color: white;
+}
+
+.courseSelected {
+	color: white;
+	display: inline-block;
+	margin: 0 8px 8px 8px;
+	border: 1px solid white;
+	padding: 4px 6px 4px 6px;
+	min-width: 60px;
+	cursor: pointer;
+	background-color: #51ab47;
+}
+
+/*Booking*/
+
+.darkerHr {
+	border-top: 1px solid #ccc;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.HT2017 {
+	display: none;
+}
+
+.VT2017 {
+	display: none;
+}
+
+.HT2016 {
+	display: none;
+}
+
+.findTutorButton {
+	cursor: pointer;
+}
+
+.tutorsFound {
+	background-color: white;
+	display: none;
+}
+
+.longText {
+	display: none;
+}
+
+.bookingTimeSlotButton {
+	width: 180px;
+}
+
+/*Forum*/
+.searchBox {
+	width: 99%;
+	height: 40px;
+	margin: 16px 0 16px 0;
+}
+
+.searchBox:focus {
+	border: 1px solid #51ab47;
+	outline-width: 0;
+}
+
+.category {
+	font-size:16px;
+	color: #666;
+	padding: 0 0 8px 0;
+}
+
+.numberOfPosts {
+	border-radius: 10px;
+	background-color: #abe1a5;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+.postAuthor {
+	font-size: 13px;
+	color: #7ccb74;
+}
+
+.postText {
+	font-size: 13px;
+	color: #777;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+<title>Booked sessions </title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<!-- Side navigation bar -->
+<div class="sidenav sidenav-to-left">
+    <div class="margin-bottom-16" style="height:43px;border-bottom: 1px solid #ffffff">
+        <img style="height:28px;width:auto;margin-left:60px" src="resources/UniTutor-white.png">
+    </div>
+    <a href="calendarView.html">Tutoring booking</a>
+    <a href="generalForum.html">General forum</a>
+    <a href="questionsAndAnswers.html">Questions & Answers</a>
+</div>
+
+<div class="main">
+
+    <!-- Header bar-->
+    <div class="header padding-top-8">
+        <span id="slideIcon" class="hkr-color padding-left-16"
+              style="font-size:30px;cursor:pointer;float:left">&#9776;</span>
+        <div class="headerItems">
+            <a class="header-item" style="padding-right:24px" href="#home" onclick="location.href='dashBoard.html';">Home</a>
+            <a class="header-item" href="#tutorView" onclick="location.href='tutorView.html';">Tutors</a>
+            <a class="header-item" href="#bookedSessions" onclick="location.href='calendarView.html';">My calendar</a>
+        </div>
+    </div>
+
+    <div class="pageContent center">
+
+        <div class="w3-container">
+            <div class="w3-display-container margin-top-16" style="height:40px">
+                <h4 class="w3-display-middle hkr-color">Your booking schedule</h4>
+            </div>
+        </div>
+
+        <div class="w3-card-4">
+            <div class="month margin-top-16">
+                <ul>
+                    <li class="prev">&#10094;</li>
+                    <li class="next">&#10095;</li>
+                    <li>November<br>
+                        <span style="font-size:18px">2017</span>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+            </ul>
+
+            <ul class="days">
+                <li><span class="past">25</span></li>
+                <li><span class="past">26</span></li>
+                <li><span class="past">27</span></li>
+                <li><span class="past">28</span></li>
+                <li><span class="past">29</span></li>
+                <li><span class="past">30</span></li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li><span id="date5" class="active">5</span></li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li><span class="active">10</span></li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li><span class="active">19</span></li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li><span onclick="location.href='bookNewSession.html'">30</span></li>
+            </ul>
+
+            <div class="bookingDetail">
+                <div style="height:40px;background-color:#ddd">
+                    <div class="detailHeader" style="float:left">
+                        Sessions book on 5th, November, 2017
+                    </div>
+                    <div class="detailHeader" style="float:right">
+                        <i class="material-icons" style="cursor:pointer">keyboard_arrow_up</i>
+                    </div>
+                </div>
+                <div class="w3-container">
+                    <table class="w3-table w3-bordered">
+                        <tr>
+                            <th>Time</th>
+                            <th>Course</th>
+                            <th>Location</th>
+                            <th>Tutor</th>
+                            <th></th>
+                        </tr>
+                        <tr id="bookedSession">
+                            <td>15:00 - 16:00</td>
+                            <td>Embedded System I</td>
+                            <td>07-320N</td>
+                            <td>Xujia Zhou</td>
+                            <td><i class="material-icons" style="cursor:pointer"
+                                   onclick="$('#deleteDialog').css('display', 'block')">delete</i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteDialog" class="w3-modal">
+        <div class="w3-modal-content w3-animate-bottom w3-card-4" style="width:400px">
+            <header class="w3-container w3-text-white hkr-color-light-bg" style="height:40px">
+                    <span onclick="$('#deleteDialog').css('display', 'none')"
+                          class="w3-button w3-display-topright" style="height:40px">&times;</span>
+                <div class="w3-display-container" style="height:100%">
+                    <p class="w3-display-left">Session deletion confirmation</p>
+                </div>
+
+            </header>
+            <div class="w3-container">
+                <div style="height:50px;color:#666">
+                    <p style="margin-top:16px">Are you sure you want to delete this session?</p>
+                </div>
+            </div>
+            <footer class="margin-top-16" style="border-top: 1px solid #51ab47">
+                <div class="w3-display-container" style="height:36px">
+                    <p class="w3-button w3-display-right" style="cursor:pointer"
+                       onclick="deleteBookedSession()">Yes, I'm sure.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

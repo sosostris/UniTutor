@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div style="height:60px"></div>
+<div class="w3-row">
+    <div class="w3-col w3-container" style="margin-left:40px;width:60%">
+        <div class="w3-card-4">
+            <img style="width:100%;height:auto" src="resources/HKR-campus.jpg" alt="HKR-campus">
+        </div>
+    </div>
+    <div class="w3-col w3-container w3-cell-center" style="width:30%">
+        <div class="w3-display-container" style="height:600px">
+            <div class="w3-display-middle w3-card-4">
+                <div style="width:360px;height:400px;">
+                    <div class="w3-container hkr-color-bg">
+                        <div class="w3-display-container" style="height:65px">
+                            <img class="w3-display-left" style="height:32px;width:auto"
+                                 src="resources/UniTutor-white.png">
+                        </div>
+                    </div>
+                    <form id="signInForm" class="w3-container margin-top-16">
+                        <p>
+                            <label class="hkr-color">Email</label>
+                            <input class="w3-input w3-border" name="email"></p>
+                        <p>
+                            <label class="hkr-color">Password</label>
+                            <input class="w3-input w3-border"></p>
+                        <p class="margin-top-32">
+                        <div class="w3-row">
+                            <button class="w3-col w3-btn hkr-color-bg w3-text-white" style="width:45%"
+                                    onclick="validateForm(); return false">Log in</button>
+                            <div class="w3-col w3-container w3-white" style="width:10%"></div>
+                            <button class="w3-col w3-btn hkr-color-bg w3-text-white" style="width:45%;padding-right:0">Register</button>
+                        </div>
+                        </p>
+                        <p id="errorMessage" class="error margin-top-16" style="height:76px">
+                        </p>
+                        <p class="hint">You can only log in with HKR email.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        var email = document.forms["signInForm"]["email"].value;
+        if (!email.endsWith("@stud.hkr.se")) {
+            var errorMessage = document.getElementById('errorMessage');
+            errorMessage.innerHTML = 'Sign in with HKR e-mail address\n' +
+                'Students: firstname.surnameXXXX@stud.hkr.se';
+        } else {
+            location.assign("dashBoard.html");
+        }
+    }
+</script>
+
+</body>
+</html>
