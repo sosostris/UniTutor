@@ -25,6 +25,7 @@ function bookSession() {
     $('#date30').css('background-color', 'crimson').css('color', 'white');
     $('#alertBookingDialog').hide();
     $('#bookedTimeSlot').hide();
+    $('.bookingDetail').slideUp('slow');
 }
 
 function deleteBookedSession() {
@@ -89,4 +90,5 @@ function collapseText() {
 function bookSessionBySearch() {
     $('#alertBookingDialog').hide();
     $('#bookedTimeSlot').hide();
+    $('.tutorsFound').slideUp('slow');
 }
