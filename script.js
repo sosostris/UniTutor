@@ -92,3 +92,9 @@ function bookSessionBySearch() {
     $('#bookedTimeSlot').hide();
     $('.tutorsFound').slideUp('slow');
 }
+
+// dashboard
+function giveFiveStars() {
+    $('#zeroStar').hide();
+    $('#fiveStars').show();
+}

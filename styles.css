@@ -13,6 +13,10 @@ a {
 	cursor: pointer;
 }
 
+textarea {
+	resize: none;
+}
+
 .hkr-color {
 	color: #51ab47;
 }
@@ -349,18 +353,6 @@ a {
 	text-align: center;
 }
 
-#deleteDialog {
-	margin-top: 400px;
-}
-
-#alertBookedDialog {
-	margin-top: 400px;
-}
-
-#alertBookingDialog {
-	margin-top: 200px;
-}
-
 /*Tutor*/
 .course {
 	color: #666;
@@ -455,4 +447,8 @@ a {
 .postText {
 	font-size: 13px;
 	color: #777;
+}
+
+#fiveStars {
+	display: none;
 }

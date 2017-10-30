@@ -19,7 +19,7 @@
         <img style="height:28px;width:auto;margin-left:60px" src="resources/UniTutor-white.png">
     </div>
     <a href="calendarView.html">Tutoring booking</a>
-    <a href="generalForum.html">General forum</a>
+    <a href="generalForum.html">Social forum</a>
     <a href="questionsAndAnswers.html">Questions & Answers</a>
 </div>
 
@@ -33,8 +33,7 @@
             <a class="header-item" style="padding-right:24px" href="#home" onclick="location.href='dashBoard.html';">Home</a>
             <a class="header-item" href="#Q&A" onclick="location.href='questionsAndAnswers.html';">Q & A</a>
             <a class="header-item" href="#generalForum" onclick="location.href='generalForum.html';">Forum</a>
-            <a class="header-item" href="#tutorView" onclick="location.href='tutorView.html';">Tutors</a>
-            <a class="header-item" href="#bookedSessions" onclick="location.href='calendarView.html';">My calendar</a>
+            <a class="header-item" href="#tutoring" onclick="location.href='calendarView.html';">Tutoring</a>
         </div>
     </div>
 
@@ -53,13 +52,13 @@
                 <h6 class="hkr-color">15:00 - 16:00, 15th, November, 7-320N</h6>
             </div>
             <div class="w3-container w3-cell" style="width:30%">
-                <button class="w3-button hkr-color-bg w3-text-white margin-top-16"
+                <button class="w3-button hkr-color-bg w3-text-white margin-top-16" onclick="$('#contactTutorDialog').show()"
                         style="float:right">Contact tutor</button>
             </div>
             <hr class="margin-vertical-16">
             <div class="w3-container w3-cell" style="width:500px">
-                <h5 class="w3-opacity"><b>Algorithm and Data Structure / Xujia Zhou</b></h5>
-                <h6 class="hkr-color margin-bottom-32">15:00 - 16:00, 30th, November, 7-320N</h6>
+                <h5 class="w3-opacity"><b>Applied Physics / Xujia Zhou</b></h5>
+                <h6 class="hkr-color margin-bottom-32">15:00 - 16:00, 30th, November, 7-321N</h6>
             </div>
             <div class="w3-container w3-cell" style="width:30%">
                 <button class="w3-button hkr-color-bg w3-text-white margin-top-16"
@@ -75,8 +74,8 @@
                 <p>Please remember to rate the session and leave your feedback.</p>
             </div>
             <div class="w3-container w3-cell" style="width:30%">
-                <button class="w3-button hkr-color-bg w3-text-white margin-top-32"
-                        style="float:right"">Rate session
+                <button class="w3-button hkr-color-bg w3-text-white margin-top-32" onclick="$('#rateSessionDialog').show()"
+                        style="float:right">Rate session
                 </button>
             </div>
             <hr class="margin-vertical-16">
@@ -128,6 +127,76 @@
                     Ut aliquid scire se gaudeant? Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus
                     ...</p>
             </div>
+        </div>
+    </div>
+
+    <div id="contactTutorDialog" class="w3-modal">
+        <div class="w3-modal-content w3-animate-bottom w3-card-4" style="width:400px">
+            <header class="w3-container w3-text-white hkr-color-light-bg" style="height:40px">
+                    <span onclick="$('#contactTutorDialog').css('display', 'none')"
+                          class="w3-button w3-display-topright" style="height:40px">&times;</span>
+                <div class="w3-display-container" style="height:100%">
+                    <p class="w3-display-left">Contact tutor</p>
+                </div>
+
+            </header>
+            <div class="w3-container">
+                <div class="margin-top-16" style="height:200px;color:#666">
+                    <p><label>Tutor: Xujia Zhou</label>
+                        <textarea class="w3-input w3-border" style="height:150px"
+                                  placeholder="Type your message here ..." name="message" type="text"></textarea></p>
+                </div>
+            </div>
+            <footer class="margin-top-16" style="border-top: 1px solid #51ab47">
+                <div class="w3-display-container" style="height:36px">
+                    <p class="w3-button w3-display-right" style="cursor:pointer"
+                      onclick="$('#contactTutorDialog').slideUp()">Send message</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div id="rateSessionDialog" class="w3-modal">
+        <div class="w3-modal-content w3-animate-bottom w3-card-4" style="width:400px">
+            <header class="w3-container w3-text-white hkr-color-light-bg" style="height:40px">
+                    <span onclick="$('#rateSessionDialog').css('display', 'none')"
+                          class="w3-button w3-display-topright" style="height:40px">&times;</span>
+                <div class="w3-display-container" style="height:100%">
+                    <p class="w3-display-left">Rate session</p>
+                </div>
+
+            </header>
+            <div class="w3-container">
+                <div class="margin-top-16" style="height:400px;color:#666">
+                    <div class="margin-vertical-8 margin-horizontal-16 padding-8" style="background-color:#eee">
+                        <p>Tutor: Xujia Zhou</p>
+                        <p>Course: Algorithm and Data Structure</p>
+                        <p>Date: 28th, October, 2017</p>
+                    </div>
+
+                    <h5 class="margin-top-32" align="center">Was the session helpful?</h5>
+                    <div class="margin-top-16" align="center">
+                        <span id="zeroStar"><i class="question material-icons hkr-color">star_outline</i>
+                            <i class="question material-icons hkr-color">star_outline</i>
+                            <i class="question material-icons hkr-color">star_outline</i>
+                            <i class="question material-icons hkr-color">star_outline</i>
+                            <i class="question material-icons hkr-color" onclick="giveFiveStars()">star_outline</i></span>
+                        <span id="fiveStars"><i class="question material-icons hkr-color">star</i>
+                            <i class="question material-icons hkr-color">star</i>
+                            <i class="question material-icons hkr-color">star</i>
+                            <i class="question material-icons hkr-color">star</i>
+                            <i class="question material-icons hkr-color">star</i></span>
+                    </div>
+                        <textarea class="margin-top-16 w3-input w3-border" style="height:150px"
+                                  placeholder="Give feedback to the tutor ..." name="message" type="text"></textarea></p>
+                </div>
+            </div>
+            <footer class="margin-top-16" style="border-top: 1px solid #51ab47">
+                <div class="w3-display-container" style="height:36px">
+                    <p class="w3-button w3-display-right" style="cursor:pointer"
+                       onclick="$('#rateSessionDialog').slideUp()">Rate session</p>
+                </div>
+            </footer>
         </div>
     </div>
 
